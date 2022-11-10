@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.example.restservice.GreetingControllerTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.371 s <<< FAILURE! - in com.example.restservice.GreetingControllerTests
+noParamGreetingShouldReturnDefaultMessage  Time elapsed: 0.228 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.content"
+	at com.example.restservice.GreetingControllerTests.noParamGreetingShouldReturnDefaultMessage(GreetingControllerTests.java:41)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Expected to find an object with property ['content'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.
+
+paramGreetingShouldReturnTailoredMessage  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.content"
+	at com.example.restservice.GreetingControllerTests.paramGreetingShouldReturnTailoredMessage(GreetingControllerTests.java:49)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Expected to find an object with property ['content'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.
+
